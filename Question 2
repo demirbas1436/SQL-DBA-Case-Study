@@ -1,0 +1,10 @@
+Question 2: Index Strategy & Query Optimization Thinking
+Scenario:
+The following query is frequently used by end users:
+SELECT *
+FROM HastaKayit
+WHERE LOWER(AdSoyad) LIKE '%ahmet%' AND YEAR(KayitTarihi) = 2024
+Question:
+1. What performance problems might arise from this query?
+2. How would you optimize this query and/or the table structure?
+3. Are there any improvements that could be made on the application side?
