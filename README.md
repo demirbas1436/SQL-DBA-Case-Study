@@ -13,7 +13,7 @@ becerilerini ortaya koymaktır.
 1.  [Soru 1 - Performans ve Ölçeklenebilirlik
     Analizi](#soru-1---performans-ve-ölçeklenebilirlik-analizi)
 2.  [Soru 2 - İndeks Stratejisi ve Sorgu
-    Optimizasyonu](#soru-2---indeks-stratejisi-ve-sorgu-optimizasyonu)
+    Optimizasyonu](#soru-2---ındeks-stratejisi-ve-sorgu-optimizasyonu)
 3.  [Soru 3 - T-SQL Query Challenge (Satış
     Analizi)](#soru-3---t-sql-query-challenge-satış-analizi)
 4.  [Teknolojiler](#teknolojiler)
@@ -42,7 +42,7 @@ fragmentasyon, optimize edilmemiş sorgular, arşivleme eksikliği.\
 
 ------------------------------------------------------------------------
 
-##  Soru 2 - İndeks Stratejisi ve Sorgu Optimizasyonu
+##  Soru 2 - Indeks Stratejisi ve Sorgu Optimizasyonu
 
 **Senaryo:**\
 Sık kullanılan sorgu:
