@@ -40,7 +40,7 @@ Bu kadar büyük bir tablo, indeksleme ve sorgu performansını ciddi
 ## 1.5. Veri Arşivleme Eksikliği
 
 -   Tüm verilerin tek tabloda tutulması, **geçmiş yıllara ait sorguların
-    da aynı tablo üzerinde yoğun şekilde çalışmasına** neden olur.\
+    da aynı tablo üzerinde yoğun şekilde çalışmasına** neden olur.
 -   Bu da hem performansı hem de bakım maliyetini artırır.
 
 ------------------------------------------------------------------------
@@ -77,7 +77,7 @@ CREATE NONCLUSTERED INDEX IX_IslemKodu ON HastaIslemLog(IslemKodu);
 
 **Açıklama:**\
 - `NONCLUSTERED INDEX`, verileri fiziksel olarak sıralamaz, sadece arama
-rehberi gibi çalışır.\
+rehberi gibi çalışır.
 - Örneğin:
 
 ``` sql
@@ -88,7 +88,7 @@ Bu sorgu, `IX_HastaId` sayesinde çok daha hızlı çalışır.
 
 ## 2.3. Veri Boyutunu Azaltma
 
--   `Aciklama` alanı uzun ve her zaman dolu olmayabilir.\
+-   `Aciklama` alanı uzun ve her zaman dolu olmayabilir.
 -   Bu alan ayrı bir tabloya taşınarak performans artırılabilir.
 
 ``` sql
