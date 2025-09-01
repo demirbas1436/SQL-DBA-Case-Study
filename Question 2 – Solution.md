@@ -54,16 +54,16 @@ devre dışı bırakır.
 ###  1. Fonksiyonları kaldırarak indeks dostu hale getirme
 
 ``` sql
--- AdSoyad alanını doğrudan filtreleyebilmek için normalize edilmiş bir kolon ekleyelim
+-- AdSoyad alanını doğrudan filtreleyebilmek için normalize edilmiş bir kolon eklemek
 ALTER TABLE HastaKayit ADD AdSoyadNormalized AS LOWER(AdSoyad) PERSISTED;
 
--- Bu alana indeks ekleyelim
+-- Bu alana indeks eklemek
 CREATE NONCLUSTERED INDEX IX_AdSoyadNormalized ON HastaKayit(AdSoyadNormalized);
 
--- KayitTarihi için yıl bilgisi ayrı bir kolon olarak eklensin
+-- KayitTarihi için yıl bilgisi ayrı bir kolon olarak eklemek
 ALTER TABLE HastaKayit ADD KayitYili AS YEAR(KayitTarihi) PERSISTED;
 
--- Bu alana da indeks ekleyelim
+-- Bu alana da indeks eklemek
 CREATE NONCLUSTERED INDEX IX_KayitYili ON HastaKayit(KayitYili);
 
 -- Artık sorgu şu şekilde yazılabilir:
@@ -84,10 +84,10 @@ Eğer `AdSoyad` üzerinde sıkça metin araması yapılıyorsa, **Full-Text
 Index** kullanmak çok daha verimli olur.
 
 ``` sql
--- Full-text özelliğini aktif et
+-- Full-text özelliğini aktif etmek
 CREATE FULLTEXT CATALOG HastaKayitCatalog AS DEFAULT;
 
--- Full-text indeks oluştur
+-- Full-text indeks oluşturmak
 CREATE FULLTEXT INDEX ON HastaKayit(AdSoyad) 
     KEY INDEX PK_HastaKayit ON HastaKayitCatalog;
 
@@ -136,12 +136,12 @@ sağlar.
 
 -   **Arama Kutusu İçin Otomatik Tamamlama**: Kullanıcılar yazarken
     öneriler sunulursa, tam metin arama yerine daha hedefli sorgular
-    yapılabilir.\
+    yapılabilir.
 -   **Ön Bellekleme (Caching)**: Sık kullanılan sorguların sonuçları
-    uygulama tarafında belli sürelerle ön belleğe alınabilir.\
+    uygulama tarafında belli sürelerle ön belleğe alınabilir.
 -   **Arama Parametrelerinin Kısıtlanması**: Kullanıcılara tarih
     aralığı, isim baş harfi gibi filtreler sunularak sorgular daha dar
-    kapsamlı hale getirilebilir.\
+    kapsamlı hale getirilebilir.
 -   **Arama Loglarının Analizi**: Kullanıcıların en çok hangi isimleri
     veya tarihleri aradığı analiz edilerek, bu alanlara özel indeksler
     veya optimizasyonlar yapılabilir.
