@@ -1,4 +1,4 @@
-# 📌 Pusula Talent Academy 2025 - SQL & DBA Case Study
+#  Pusula Talent Academy 2025 - SQL & DBA Case Study
 
 Bu repo, **Pusula Talent Academy 2025 SQL & DBA Case Study** kapsamında
 verilen sorulara hazırlanmış çözümleri içermektedir.\
@@ -21,7 +21,7 @@ becerilerini ortaya koymaktır.
 
 ------------------------------------------------------------------------
 
-## 🔹 Soru 1 - Performans ve Ölçeklenebilirlik Analizi
+##  Soru 1 - Performans ve Ölçeklenebilirlik Analizi
 
 **Senaryo:**\
 - `HastaIslemLog` tablosu 5 yıl boyunca günlük \~25.000 satır veri
@@ -42,7 +42,7 @@ fragmentasyon, optimize edilmemiş sorgular, arşivleme eksikliği.\
 
 ------------------------------------------------------------------------
 
-## 🔹 Soru 2 - İndeks Stratejisi ve Sorgu Optimizasyonu
+##  Soru 2 - İndeks Stratejisi ve Sorgu Optimizasyonu
 
 **Senaryo:**\
 Sık kullanılan sorgu:
@@ -73,7 +73,7 @@ tamamlama, caching, arama parametrelerini daraltma.
 
 ------------------------------------------------------------------------
 
-## 🔹 Soru 3 - T-SQL Query Challenge (Satış Analizi)
+##  Soru 3 - T-SQL Query Challenge (Satış Analizi)
 
 **Senaryo:**\
 - Tablo: `Urun`, `Satis`\
@@ -82,7 +82,7 @@ satılmayan ürünler.
 
 **Çözümler:**
 
-✅ Yıllık toplam satış ve adet:
+ Yıllık toplam satış ve adet:
 
 ``` sql
 SELECT 
@@ -96,7 +96,7 @@ GROUP BY YEAR(S.SatisTarihi), U.UrunAdi
 ORDER BY Yil, ToplamSatisTutari DESC;
 ```
 
-✅ En çok satan ürün (her yıl için):
+ En çok satan ürün (her yıl için):
 
 ``` sql
 WITH YillikSatis AS (
@@ -115,7 +115,7 @@ WHERE ToplamSatisTutari = (
 ORDER BY Yil;
 ```
 
-✅ Hiç satılmamış ürünler:
+ Hiç satılmamış ürünler:
 
 ``` sql
 SELECT U.UrunID, U.UrunAdi, U.Fiyat
@@ -126,7 +126,7 @@ WHERE S.SatisID IS NULL;
 
 ------------------------------------------------------------------------
 
-## 🛠 Teknolojiler
+##  Teknolojiler
 
 -   **Microsoft SQL Server (T-SQL)**\
 -   İndeks stratejileri ve sorgu optimizasyonu\
@@ -135,7 +135,7 @@ WHERE S.SatisID IS NULL;
 
 ------------------------------------------------------------------------
 
-## 📊 Sonuç
+##  Sonuç
 
 Bu case study kapsamında:\
 - **Performans sorunlarını analiz ettim**\
@@ -145,5 +145,5 @@ Bu case study kapsamında:\
 
 ------------------------------------------------------------------------
 
-👉 Bu README, proje dosyalarının (Markdown raporları) genel özetini
+ Bu README, proje dosyalarının (Markdown raporları) genel özetini
 sunar.
