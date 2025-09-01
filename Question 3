@@ -1,0 +1,24 @@
+Question 3: T-SQL Query Challenge (Hospital Sales Example)
+Scenario:
+In the HBYS system, the hospital pharmacy sells products. Sales and product details are stored in the following tables:
+CREATE TABLE Urun (
+ UrunID INT PRIMARY KEY,
+ UrunAdi NVARCHAR(100),
+ Fiyat DECIMAL(10,2)
+);
+CREATE TABLE Satis (
+ SatisID INT PRIMARY KEY,
+ UrunID INT FOREIGN KEY REFERENCES Urun(UrunID),
+ Adet INT,
+ SatisTarihi DATETIME
+);
+Sample Data:
+-- Urun
+(1, 'Laptop', 15000.00), (2, 'Mouse', 250.00), (3, 'Klavye', 450.00)
+-- Satis
+(1, 1, 2, '2024-01-10'), (2, 2, 5, '2024-01-15'), (3, 1, 1, '2024-02-20'),
+(4, 3, 3, '2024-03-05'), (5, 2, 7, '2024-03-25'), (6, 3, 2, '2024-04-12')
+Tasks:
+1. Write a query that returns, per year and per product, the total sales amount (Fiyat * Adet) and total quantity.
+2. For each year, identify the product with the highest sales amount.
+3. Write a query to list products that were never sold.
