@@ -22,6 +22,11 @@ Bu kadar büyük bir tablo, indeksleme ve sorgu performansını ciddi
 
 -   Sürekli **INSERT / UPDATE / DELETE** işlemleri, veri sayfalarının
     parçalanmasına (fragmentation) sebep olur.\
+    (Veritabanında fragmentasyon, kayıtların veya verilerin fiziksel olarak diskte/tabloda düzensiz bir şekilde dağılması anlamına gelir. Bu da zamanla performans kaybına yol açar.\
+   -    Neden Oluşur?\
+     -   Çok sık INSERT / UPDATE / DELETE yapılması
+     -   Tablo ve indekslerin sürekli büyüyüp küçülmesi
+     -    Yoğun transaction trafiği\
 -   Sonuçları:
     -   Sorguların yavaşlaması\
     -   Daha fazla disk okuma (I/O) ihtiyacı\
@@ -114,6 +119,56 @@ WHERE IslemTarihi >= DATEADD(DAY, -30, GETDATE());
 EXEC sp_MSforeachtable 'ALTER INDEX ALL ON ? REBUILD';
 
 -- İstatistikleri güncelle
+EXEC sp_updatestats;
+```
+
+``` sql
+
+CREATE TABLE HastaIslemLog (
+    Id INT IDENTITY(1,1) PRIMARY KEY,                  
+    HastaId INT NOT NULL,                              
+    IslemTarihi DATETIME NOT NULL DEFAULT GETDATE(),   
+    IslemKodu NVARCHAR(20) NOT NULL,                  
+    Aciklama NVARCHAR(500) NULL                        
+);
+
+-- 1. İndeksleri oluşturmak
+CREATE NONCLUSTERED INDEX IX_HastaId 
+ON HastaIslemLog(HastaId);
+
+CREATE NONCLUSTERED INDEX IX_IslemTarihi 
+ON HastaIslemLog(IslemTarihi);
+
+CREATE NONCLUSTERED INDEX IX_IslemKodu 
+ON HastaIslemLog(IslemKodu);
+
+-- 2. Arşiv tablosunu oluşturmak
+CREATE TABLE HastaIslemLog_Arsiv (
+    Id INT PRIMARY KEY,                                
+    HastaId INT NOT NULL,
+    IslemTarihi DATETIME NOT NULL,
+    IslemKodu NVARCHAR(20) NOT NULL,
+    Aciklama NVARCHAR(500) NULL
+);
+
+-- 3. 2 yıldan eski kayıtları arşivlemek
+INSERT INTO HastaIslemLog_Arsiv (Id, HastaId, IslemTarihi, IslemKodu, Aciklama)
+SELECT Id, HastaId, IslemTarihi, IslemKodu, Aciklama
+FROM HastaIslemLog
+WHERE IslemTarihi < DATEADD(YEAR, -2, GETDATE());
+
+-- Arşivlenen kayıtları ana tablodan silmek
+DELETE FROM HastaIslemLog
+WHERE IslemTarihi < DATEADD(YEAR, -2, GETDATE());
+
+-- 4. Son 30 güne ait kayıtlar için görünüm oluşturmak
+CREATE VIEW HastaIslemLog_Son30Gun AS
+SELECT *
+FROM HastaIslemLog
+WHERE IslemTarihi >= DATEADD(DAY, -30, GETDATE());
+
+-- 5. Bakım komutları (opsiyonel ama önerilebilir)
+EXEC sp_MSforeachtable 'ALTER INDEX ALL ON ? REBUILD';
 EXEC sp_updatestats;
 ```
 
