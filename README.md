@@ -8,7 +8,7 @@ becerilerini ortaya koymaktır.
 
 ------------------------------------------------------------------------
 
-## 🚀 İçindekiler
+##  İçindekiler
 
 1.  [Soru 1 - Performans ve Ölçeklenebilirlik
     Analizi](#soru-1---performans-ve-ölçeklenebilirlik-analizi)
