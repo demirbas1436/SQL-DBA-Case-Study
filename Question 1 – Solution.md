@@ -4,8 +4,8 @@
 
 ## 1.1. Veri Miktarının Aşırı Artması
 
--   Günlük: **25.000 satır**\
--   Yıllık: **\~9 milyon satır**\
+-   Günlük: **25.000 satır**
+-   Yıllık: **\~9 milyon satır**
 -   5 yılda: **\~45 milyon satır**
 
 Bu kadar büyük bir tablo, indeksleme ve sorgu performansını ciddi
@@ -13,23 +13,23 @@ Bu kadar büyük bir tablo, indeksleme ve sorgu performansını ciddi
 
 ## 1.2. Yetersiz İndeksleme
 
--   Sadece **Id** alanı birincil anahtar olarak indekslenmiş.\
+-   Sadece **Id** alanı birincil anahtar olarak indekslenmiş.
 -   Ancak sorgular çoğunlukla **HastaId** ve **IslemTarihi** üzerinden
-    çalışıyor.\
+    çalışıyor.
 -   Bu alanlarda indeks bulunmaması, sorguların yavaşlamasına yol açar.
 
 ## 1.3. Fragmentasyon ve Disk I/O Sorunları
 
 -   Sürekli **INSERT / UPDATE / DELETE** işlemleri, veri sayfalarının
     parçalanmasına (fragmentation) sebep olur.\
-    (Veritabanında fragmentasyon, kayıtların veya verilerin fiziksel olarak diskte/tabloda düzensiz bir şekilde dağılması anlamına gelir. Bu da zamanla performans kaybına yol açar.\
-   -    Neden Oluşur?\
+    (Veritabanında fragmentasyon, kayıtların veya verilerin fiziksel olarak diskte/tabloda düzensiz bir şekilde dağılması anlamına gelir. Bu da zamanla performans kaybına yol açar.
+   -    Neden Oluşur?
      -   Çok sık INSERT / UPDATE / DELETE yapılması
      -   Tablo ve indekslerin sürekli büyüyüp küçülmesi
-     -    Yoğun transaction trafiği\
+     -    Yoğun transaction trafiği
 -   Sonuçları:
-    -   Sorguların yavaşlaması\
-    -   Daha fazla disk okuma (I/O) ihtiyacı\
+    -   Sorguların yavaşlaması
+    -   Daha fazla disk okuma (I/O) ihtiyacı
     -   Bellek ve CPU kullanımında artış
 
 ## 1.4. Sorgu Optimizasyonunun Eksikliği
