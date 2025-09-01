@@ -128,19 +128,19 @@ WHERE S.SatisID IS NULL;
 
 ##  Teknolojiler
 
--   **Microsoft SQL Server (T-SQL)**\
--   İndeks stratejileri ve sorgu optimizasyonu\
--   Veritabanı bakım komutları\
+-   **Microsoft SQL Server (T-SQL)**
+-   İndeks stratejileri ve sorgu optimizasyonu
+-   Veritabanı bakım komutları
 -   Full-Text Search
 
 ------------------------------------------------------------------------
 
 ##  Sonuç
 
-Bu case study kapsamında:\
-- **Performans sorunlarını analiz ettim**\
-- **Sürdürülebilir çözümler önerdim**\
-- **Sorgu optimizasyonu ve indeksleme stratejilerini geliştirdim**\
+Bu case study kapsamında:
+- **Performans sorunlarını analiz ettim**
+- **Sürdürülebilir çözümler önerdim**
+- **Sorgu optimizasyonu ve indeksleme stratejilerini geliştirdim**
 - **T-SQL üzerinde analitik rapor sorguları yazdım**
 
 ------------------------------------------------------------------------
