@@ -5,25 +5,25 @@
 ## 1. İndeks Kullanılamaz Durumda
 
 -   `LOWER(AdSoyad)` ifadesi, sütun üzerinde tanımlı indeksin
-    kullanılmasını engeller.\
+    kullanılmasını engeller.
 -   Fonksiyon kullanımı, SQL Server'ın indeksleri atlamasına neden olur.
 
 ## 2. LIKE '%...%' Kalıbı
 
 -   Joker karakterin başta olması (`%ahmet%`) SQL'in indeksleri
-    kullanmasını engeller.\
+    kullanmasını engeller.
 -   Bu durumda tam tablo taraması (**full table scan**) yapılır.
 
 ## 3. YEAR(KayitTarihi) Fonksiyonu
 
 -   `YEAR(KayitTarihi)` ifadesi de tarih sütunu üzerindeki indekslerin
-    devre dışı kalmasına neden olur.\
+    devre dışı kalmasına neden olur.
 -   Fonksiyonlar indeks dostu değildir.
 
 ## 4. SELECT \* Kullanımı
 
 -   Tüm sütunların çağrılması, gereksiz veri taşınmasına ve bellek
-    kullanımına yol açar.\
+    kullanımına yol açar.
 -   Özellikle büyük tabloda ciddi performans kaybı yaratır.
 
 ------------------------------------------------------------------------
