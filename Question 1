@@ -1,0 +1,16 @@
+Question 1: Performance & Scalability Analysis in Hospital Data
+Scenario:
+A table below has been used for 5 years in a Hospital Information Management System (HBYS). Each day, about
+25,000 rows are inserted.
+Recently, queries on this table have become slower and users have reported difficulty accessing past records.
+CREATE TABLE HastaIslemLog (
+ Id INT IDENTITY(1,1) PRIMARY KEY,
+ HastaId INT,
+ IslemTarihi DATETIME,
+ IslemKodu NVARCHAR(20),
+ Aciklama NVARCHAR(500)
+);
+Question:
+1. What could be the reasons for the performance degradation?
+2. What improvements would you suggest for better sustainability?
+3. Do you think using the table in this way for 5 years was the correct approach? Why or why not?
