@@ -11,13 +11,13 @@ becerilerini ortaya koymaktır.
 ## 🚀 İçindekiler
 
 1.  [Soru 1 - Performans ve Ölçeklenebilirlik
-    Analizi](#-soru-1---performans-ve-ölçeklenebilirlik-analizi)\
+    Analizi](#soru-1---performans-ve-ölçeklenebilirlik-analizi)
 2.  [Soru 2 - İndeks Stratejisi ve Sorgu
-    Optimizasyonu](#-soru-2---indeks-stratejisi-ve-sorgu-optimizasyonu)\
+    Optimizasyonu](#soru-2---indeks-stratejisi-ve-sorgu-optimizasyonu)
 3.  [Soru 3 - T-SQL Query Challenge (Satış
-    Analizi)](#-soru-3---t-sql-query-challenge-satış-analizi)\
-4.  [Teknolojiler](#-teknolojiler)\
-5.  [Sonuç](#-sonuç)
+    Analizi)](#soru-3---t-sql-query-challenge-satış-analizi)
+4.  [Teknolojiler](#teknolojiler)
+5.  [Sonuç](#sonuç)
 
 ------------------------------------------------------------------------
 
