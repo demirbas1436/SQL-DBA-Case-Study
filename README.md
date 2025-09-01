@@ -1,7 +1,7 @@
 #  Pusula Talent Academy 2025 - SQL & DBA Case Study
 
 Bu repo, **Pusula Talent Academy 2025 SQL & DBA Case Study** kapsamında
-verilen sorulara hazırlanmış çözümleri içermektedir.
+verilen sorulara hazırlanmış çözümleri içermektedir.\
 Amaç, **veritabanı tasarımı, performans analizi, indeks stratejileri ve
 T-SQL sorgulama yetkinliklerini** göstermek ve problem çözme
 becerilerini ortaya koymaktır.
