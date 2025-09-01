@@ -1,4 +1,4 @@
-# Bu Sorgudan Kaynaklanabilecek Performans Sorunları
+# 1. Bu Sorgudan Kaynaklanabilecek Performans Sorunları
 
 (What performance problems might arise from this query?)
 
@@ -28,7 +28,7 @@
 
 ------------------------------------------------------------------------
 
-# Sorgu ve/veya Tablo Yapısını Optimize Etme Önerileri
+# 2. Sorgu ve/veya Tablo Yapısını Optimize Etme Önerileri
 
 (How would you optimize this query and/or the table structure?)
 
@@ -51,7 +51,7 @@ devre dışı bırakır.\
 
 ## Optimizasyon İçin Olması Gereken Sorgular
 
-### 🔹 1. Fonksiyonları kaldırarak indeks dostu hale getirme
+###  1. Fonksiyonları kaldırarak indeks dostu hale getirme
 
 ``` sql
 -- AdSoyad alanını doğrudan filtreleyebilmek için normalize edilmiş bir kolon ekleyelim
@@ -78,7 +78,7 @@ alanlar üzerinden çalışır ve indeks kullanılabilir hale gelir.
 
 ------------------------------------------------------------------------
 
-### 🔹 2. Full-Text Search Alternatifi
+###  2. Full-Text Search Alternatifi
 
 Eğer `AdSoyad` üzerinde sıkça metin araması yapılıyorsa, **Full-Text
 Index** kullanmak çok daha verimli olur.
@@ -100,7 +100,7 @@ WHERE CONTAINS(AdSoyad, 'ahmet')
 
 ------------------------------------------------------------------------
 
-### 🔹 3. Tarih Aralığı Kullanımı
+###  3. Tarih Aralığı Kullanımı
 
 `YEAR(KayitTarihi) = 2024` yerine doğrudan **tarih aralığı** kullanmak
 indeks kullanımını kolaylaştırır:
@@ -115,7 +115,7 @@ WHERE AdSoyad LIKE '%ahmet%'
 
 ------------------------------------------------------------------------
 
-### 🔹 4. Gereksiz Veri Taşımamak
+###  4. Gereksiz Veri Taşımamak
 
 ``` sql
 -- SELECT * yerine sadece gerekli alanları seç
@@ -130,7 +130,7 @@ sağlar.
 
 ------------------------------------------------------------------------
 
-# Uygulama Tarafında Yapılabilecek İyileştirmeler
+# 3. Uygulama Tarafında Yapılabilecek İyileştirmeler
 
 (Are there any improvements that could be made on the application side?)
 
