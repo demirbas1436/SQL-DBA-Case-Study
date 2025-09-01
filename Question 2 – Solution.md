@@ -41,10 +41,10 @@ WHERE LOWER(AdSoyad) LIKE '%ahmet%'
   AND YEAR(KayitTarihi) = 2024;
 ```
 
-**Sorunlar:**\
+**Sorunlar:**
 - `LOWER(AdSoyad)` ve `YEAR(KayitTarihi)` fonksiyonları → indeksleri
-devre dışı bırakır.\
-- `LIKE '%ahmet%'` → wildcard başta olduğu için indeks kullanılamaz.\
+devre dışı bırakır.
+- `LIKE '%ahmet%'` → wildcard başta olduğu için indeks kullanılamaz.
 - `SELECT *` → gereksiz veri taşır, performansı düşürür.
 
 ------------------------------------------------------------------------
