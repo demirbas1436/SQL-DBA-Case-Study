@@ -34,11 +34,11 @@ yaşamış.
 - Performans kaybının nedenlerini analiz ettim: yetersiz indeksleme,
 fragmentasyon, optimize edilmemiş sorgular, arşivleme eksikliği.
 - İyileştirme önerileri:
-- **Arşivleme ve Partitioning** (eski verileri ayrı tabloda tutmak)
-- **Yeni indeksler** (HastaId, IslemTarihi, IslemKodu)
-- **Zaman bazlı görünümler (Views)**
-- **Veri boyutu azaltma** (Aciklama kolonunu ayrı tabloya taşımak)
-- **Bakım komutları** (index rebuild, update statistics)
+    - **Arşivleme ve Partitioning** (eski verileri ayrı tabloda tutmak)
+    - **Yeni indeksler** (HastaId, IslemTarihi, IslemKodu)
+    - **Zaman bazlı görünümler (Views)**
+    - **Veri boyutu azaltma** (Aciklama kolonunu ayrı tabloya taşımak)
+    - **Bakım komutları** (index rebuild, update statistics)
 
 ------------------------------------------------------------------------
 
