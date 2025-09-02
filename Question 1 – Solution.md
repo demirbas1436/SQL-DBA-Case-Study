@@ -26,7 +26,7 @@ Bu kadar büyük bir tablo, indeksleme ve sorgu performansını ciddi
    -    Neden Oluşur?\
      -   Çok sık INSERT / UPDATE / DELETE yapılması\
      -   Tablo ve indekslerin sürekli büyüyüp küçülmesi\
-     -    Yoğun transaction trafiği
+     -    Yoğun transaction trafiği)
 -   Sonuçları:
     -   Sorguların yavaşlaması
     -   Daha fazla disk okuma (I/O) ihtiyacı
