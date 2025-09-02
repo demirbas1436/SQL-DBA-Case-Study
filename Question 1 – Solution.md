@@ -23,9 +23,9 @@ Bu kadar büyük bir tablo, indeksleme ve sorgu performansını ciddi
 -   Sürekli **INSERT / UPDATE / DELETE** işlemleri, veri sayfalarının
     parçalanmasına (fragmentation) sebep olur.\
     (Veritabanında fragmentasyon, kayıtların veya verilerin fiziksel olarak diskte/tabloda düzensiz bir şekilde dağılması anlamına gelir. Bu da zamanla performans kaybına yol açar.
-   -    Neden Oluşur?
-     -   Çok sık INSERT / UPDATE / DELETE yapılması
-     -   Tablo ve indekslerin sürekli büyüyüp küçülmesi
+   -    Neden Oluşur?\
+     -   Çok sık INSERT / UPDATE / DELETE yapılması\
+     -   Tablo ve indekslerin sürekli büyüyüp küçülmesi\
      -    Yoğun transaction trafiği
 -   Sonuçları:
     -   Sorguların yavaşlaması
