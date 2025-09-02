@@ -186,13 +186,13 @@ approach?)
 ## Uzun Vadede: **Hayır**
 
 -   Veri hacmi arttıkça, tek tablo yaklaşımı **sürdürülebilir olmaktan
-    çıkar**.\
+    çıkar**.
 -   Tek tabloda tüm verilerin tutulması, hem performans hem de bakım
     maliyetini yükseltir.
 
 ## Daha Doğru Yaklaşım
 
 -   **Modüler, arşivlenebilir ve indekslenebilir** bir yapı
-    kullanılmalıydı.\
+    kullanılmalıydı.
 -   Böylece sistem büyüyen veri hacmine rağmen daha uzun süre sağlıklı
     çalışabilirdi.
