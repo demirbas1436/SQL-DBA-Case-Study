@@ -55,13 +55,13 @@ Bu kadar büyük bir tablo, indeksleme ve sorgu performansını ciddi
     bölünebilir.
 
 ``` sql
--- 2 yıldan eski kayıtları arşiv tabloya taşı
+-- 2 yıldan eski kayıtları arşiv tabloya taşımak
 INSERT INTO HastaIslemLog_Arsiv (HastaId, IslemTarihi, IslemKodu, Aciklama)
 SELECT HastaId, IslemTarihi, IslemKodu, Aciklama
 FROM HastaIslemLog
 WHERE IslemTarihi < DATEADD(YEAR, -2, GETDATE());
 
--- Ardından eski kayıtları ana tablodan sil
+-- Ardından eski kayıtları ana tablodan silmek
 DELETE FROM HastaIslemLog
 WHERE IslemTarihi < DATEADD(YEAR, -2, GETDATE());
 ```
@@ -69,14 +69,14 @@ WHERE IslemTarihi < DATEADD(YEAR, -2, GETDATE());
 ## 2.2. İndeksleme (Indexing)
 
 ``` sql
--- HastaId, IslemTarihi ve IslemKodu alanlarına indeks ekle
+-- HastaId, IslemTarihi ve IslemKodu alanlarına indeks eklemek
 CREATE NONCLUSTERED INDEX IX_HastaId ON HastaIslemLog(HastaId);
 CREATE NONCLUSTERED INDEX IX_IslemTarihi ON HastaIslemLog(IslemTarihi);
 CREATE NONCLUSTERED INDEX IX_IslemKodu ON HastaIslemLog(IslemKodu);
 ```
 
 **Açıklama:**\
-- `NONCLUSTERED INDEX`, verileri fiziksel olarak sıralamaz, sadece arama
+- `NONCLUSTERED INDEX`, verileri fiziksel olarak sıralamaz, sadece aramak
 rehberi gibi çalışır.
 - Örneğin:
 
