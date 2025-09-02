@@ -32,7 +32,7 @@ yaşamış.
 
 **Çözüm Adımları:**
 - Performans kaybının nedenlerini analiz ettim: yetersiz indeksleme,
-fragmentasyon, optimize edilmemiş sorgular, arşivleme eksikliği.\
+fragmentasyon, optimize edilmemiş sorgular, arşivleme eksikliği.
 - İyileştirme önerileri:
 - **Arşivleme ve Partitioning** (eski verileri ayrı tabloda tutmak)
 - **Yeni indeksler** (HastaId, IslemTarihi, IslemKodu)
