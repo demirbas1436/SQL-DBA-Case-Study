@@ -75,7 +75,7 @@ CREATE NONCLUSTERED INDEX IX_IslemTarihi ON HastaIslemLog(IslemTarihi);
 CREATE NONCLUSTERED INDEX IX_IslemKodu ON HastaIslemLog(IslemKodu);
 ```
 
-**Açıklama:**\
+**Açıklama:**
 - `NONCLUSTERED INDEX`, verileri fiziksel olarak sıralamaz, sadece aramak
 rehberi gibi çalışır.
 - Örneğin:
