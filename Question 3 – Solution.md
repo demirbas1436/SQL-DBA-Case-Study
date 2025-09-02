@@ -18,7 +18,7 @@ JOIN
 GROUP BY 
   YEAR(S.SatisTarihi), U.UrunAdi
 ORDER BY 
-  Yil, ToplamSatisTutari DESC;
+  Yil, ToplamSatisTutari DESC
 ```
 
 ------------------------------------------------------------------------
@@ -53,7 +53,7 @@ WHERE
     WHERE Yil = YS.Yil
   )
 ORDER BY 
-  Yil;
+  Yil
 ```
 
 ------------------------------------------------------------------------
@@ -72,5 +72,5 @@ FROM
 LEFT JOIN 
   Satis S ON U.UrunID = S.UrunID
 WHERE 
-  S.SatisID IS NULL;
+  S.SatisID IS NULL
 ```
