@@ -115,10 +115,10 @@ WHERE IslemTarihi >= DATEADD(DAY, -30, GETDATE());
 -   SQL Server'da düzenli bakım performansı artırır.
 
 ``` sql
--- Tüm indeksleri yeniden oluştur
+-- Tüm indeksleri yeniden oluşturmak
 EXEC sp_MSforeachtable 'ALTER INDEX ALL ON ? REBUILD';
 
--- İstatistikleri güncelle
+-- İstatistikleri güncellemek
 EXEC sp_updatestats;
 ```
 
